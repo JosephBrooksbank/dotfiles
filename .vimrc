@@ -1,8 +1,14 @@
 """ BASIC SETTINGS 
-"colorscheme badwolf		"This is a colorscheme, I'll probably change this one later to fit my system more 
+"colorscheme badwolf	" A lot of people like badwolf, it doesn't fit my color scheme so I'm keeping it off for now 
 syntax enable 			" Enables syntax processing, important for basically everything 
 
 let mapleader=","        " Setting leader key to comma
+
+""" BACKUPS 
+set backup
+set backupdir=~/tmp
+set directory=~/tmp
+set writebackup
 
 """ SPACES AND TABS 
 
@@ -47,7 +53,7 @@ set foldmethod=indent 		" fold based on indent level (helpful for python, mostly
 nnoremap gV `[v`] 		" visually selects block of characters from last INSERT mode TODO see if I want this 
 
 " jk is escape 
-inoremap jk <esc>             " MAPS jk TO ESC, IMPORTANT 
+inoremap jj  <esc>             " MAPS jk TO ESC, IMPORTANT 
 
 
 """ SHORTCUTS 
@@ -57,3 +63,4 @@ inoremap jk <esc>             " MAPS jk TO ESC, IMPORTANT
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>s :mksession<CR>
+

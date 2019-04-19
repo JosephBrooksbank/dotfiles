@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tmux new-session -d "echo hi"
+tmux -2 attach-session -d

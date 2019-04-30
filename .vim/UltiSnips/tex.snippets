@@ -84,13 +84,11 @@ $0
 endsnippet 
 
 snippet li "list item"
-\item $1
-$0
+\item $1 $0 
 endsnippet
 
 snippet sli "sub list item"
-\subitem $1
-$0
+\subitem $1 $0
 endsnippet
 
 snippet box "Box"
@@ -99,29 +97,12 @@ snippet box "Box"
     $1}%
 }$0
 endsnippet
-
-snippet '([A-Za-z])(\d)' "auto subscript" wrA
-`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-endsnippet
-
-snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
-`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
-endsnippet
-
 snippet td "superscript" iA
 ^{$1}$0
 endsnippet
 
-snippet sq "square"
+snippet sq "square" i
 ^{2}$0
-endsnippet
-
-snippet '([A-Za-z])(\d)' "auto subscript" wrA
-`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-endsnippet
-
-snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
-`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
 snippet sympy "sympy block " w
@@ -143,25 +124,24 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
 `
 endsnippet
 
-snippet int "Integral"
-\int_{${1:-\infty}^{${2:\infty} $3 d${4:x} $0
+snippet int "Integral" i
+\int_{${1:-\infty}}^{${2:\infty}} $3 d${4:x} $0
 endsnippet
 
-snippet lim "limit"
+snippet lim "limit" i
 \lim_{${1:x}\to${2:\infty}} $3 $0
 endsnippet
 
-snippet sqrt "Square Root sqrt" A
+snippet sqrt "Square Root sqrt" iA
 \sqrt[${1:2}]{$2} $0
 endsnippet
 
 
 snippet stext "Short Inter Text (for math)" A
-\shortintertext{$1}
-$0
+\shortintertext{$1} $0
 endsnippet
 
-snippet itext "math text, for typing words in a math env" A
+snippet itext "math text, for typing words in a math env" iA
 \text{$1} $0
 endsnippet
 snippet infinf "infinity / infinity" A 
@@ -174,4 +154,26 @@ endsnippet
 
 snippet infty "math infinity" A
 \infty
+endsnippet
+
+snippet box2 "Box"
+`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
+│ $1 │
+`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
+$0
+endsnippet
+
+snippet '([A-Za-z])(\d)' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+snippet olist "ordered list"
+\begin{enumerate}
+$1
+\end{enumerate}
+$0
 endsnippet

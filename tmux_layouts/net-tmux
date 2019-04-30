@@ -1,4 +1,7 @@
 #!/bin/sh
 
-tmux new-session -d "echo hi"
+tmux new-session -ds tmux-net
+tmux split-window -h
+tmux resize -R 40 
+tmux split-window -v
 tmux -2 attach-session -d

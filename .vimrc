@@ -22,15 +22,15 @@ let g:UltiSnipsDirectories=["UltiSnips", "mysnips"]
 
 
 " Plug 'Valloric/YouCompleteMe' " Plugin for visual code completion 
-" """ BACKUPS 
-" set backup
-" set backupdir=~/tmp
-" set directory=~/tmp
-" set writebackup
+""" BACKUPS 
+set backup
+set backupdir=~/tmp
+set directory=~/tmp
+set writebackup
 
-
+Plug 'flazz/vim-colorschemes'
 call plug#end()
-
+colorscheme 256-grayvim
 """ SPACES AND TABS 
 
 set tabstop=5			" number of visual spaces per TAB 

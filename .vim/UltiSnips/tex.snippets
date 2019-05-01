@@ -28,7 +28,7 @@ endsnippet
 
 
 snippet report "Latex Report format with packages for images and math"
-\documentclass[]{report}
+\documentclass[]{article}
 
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -175,5 +175,13 @@ snippet olist "ordered list"
 \begin{enumerate}
 $1
 \end{enumerate}
+$0
+endsnippet
+
+snippet cases "Creates a piecewise-esque layout"
+\[ \begin{cases}
+$1
+\end{cases}
+\]
 $0
 endsnippet

@@ -13,9 +13,21 @@ for filename in $(ls config); do
         echo $PWD/config/${filename}
         if [ -d ~/.config/${filename} ] 
         then
-                echo "Directory ${filename} already exists in .config, moving to ${filename}.old..."
-                mv ~/.config/${filename} ~/.config/${filename}.old 
+                if [ -L ~/.config/${filename} ]; then
+                        #symlink already exists
+                        # maybe do something here later
+                        echo "Already symlinked lol" 
+                else
+                        echo "Directory ${filename} already exists in .config, moving to ${filename}.old..."
+                        mv ~/.config/${filename} ~/.config/${filename}.old 
+                        ln -fs $PWD/config/${filename} $HOME/.config/   
+                fi
+        else
+                ln -fs $PWD/config/${filename} $HOME/.config/   
         fi
 
-        ln -fs $PWD/config/${filename} $HOME/.config/   
 done
+if [ ! -d ~/Pictures/Wallpapers ]; then
+
+        ln -s $PWD/Wallpapers ~/Pictures/Wallpapers
+fi

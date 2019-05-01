@@ -29,8 +29,10 @@ set directory=~/tmp
 set writebackup
 
 Plug 'flazz/vim-colorschemes'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
-colorscheme 256-grayvim
+" colorscheme 256-grayvim
+colorscheme wal
 """ SPACES AND TABS 
 
 set tabstop=5			" number of visual spaces per TAB 

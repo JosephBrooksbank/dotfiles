@@ -28,7 +28,7 @@ endsnippet
 
 
 snippet report "Latex Report format with packages for images and math"
-\documentclass[]{article}
+\documentclass[12pt]{article}
 
 \usepackage{geometry}
 \usepackage{graphicx}
@@ -36,6 +36,8 @@ snippet report "Latex Report format with packages for images and math"
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{fontspec}
+\setmainfont{Iosevka SS01}
 
 % Title Page
 \title{$1}
@@ -78,9 +80,9 @@ snippet italic "italic text"
 endsnippet
 
 snippet list "begin a list"
-\begin{list}{}
+\begin{itemize}
 	$1
-\end{list}
+\end{itemize}
 $0
 endsnippet 
 
@@ -92,12 +94,6 @@ snippet sli "sub list item"
 \subitem $1 $0
 endsnippet
 
-snippet box "Box"
-\noindent\fbox{%
-    \parbox{\textwidth}{%
-    $1}%
-}$0
-endsnippet
 snippet td "superscript" iA
 ^{$1}$0
 endsnippet
@@ -134,6 +130,10 @@ snippet lim "limit" i
 endsnippet
 
 snippet sqrt "Square Root sqrt" iA
+\sqrt{$1} $0
+endsnippet
+
+snippet root "root of some base other than 2 " i
 \sqrt[${1:2}]{$2} $0
 endsnippet
 
@@ -145,7 +145,7 @@ endsnippet
 snippet itext "math text, for typing words in a math env" iA
 \text{$1} $0
 endsnippet
-snippet infinf "infinity / infinity" A 
+snippet infinf "infinity / infinity" iA 
 \frac{\infty}{\infty}
 endsnippet
 
@@ -153,15 +153,8 @@ snippet to "math to"
 $\to$
 endsnippet
 
-snippet infty "math infinity" A
+snippet infty "math infinity" iA
 \infty
-endsnippet
-
-snippet box2 "Box"
-`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
-│ $1 │
-`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
-$0
 endsnippet
 
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
@@ -179,10 +172,28 @@ $1
 $0
 endsnippet
 
-snippet cases "Creates a piecewise-esque layout"
+snippet cases "Creates a piecewise-esque layout" i
 \[ \begin{cases}
 $1
 \end{cases}
 \]
+$0
+endsnippet
+
+snippet sum "sum" i
+\sum_{n=1}^{\infty} $1 $0
+endsnippet
+
+snippet box "box 2 electric boogaloo" i
+\fbox{\begin{minipage}{15em}
+$1
+\end{minipage}}
+$0
+endsnippet
+
+snippet minipage "creates a minipage with no border"
+\begin{minipage}[${1:c}]{${2:15em}}
+$3
+\end{minipage}
 $0
 endsnippet

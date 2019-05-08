@@ -49,7 +49,6 @@ snippet report "Latex Report format with packages for images and math"
     \import{./figures/}{#1.pdf_tex}
 }
 
-\pdfsuppresswarningpagegroup=1
 % Title Page
 \title{$1}
 \author{Joseph Brooksbank}
@@ -192,7 +191,7 @@ $0
 endsnippet
 
 snippet sum "sum" i
-\sum_{n=1}^{\infty} $1 $0
+\sum_{${1:n=1}}^{${2:\infty}} $1 $0
 endsnippet
 
 snippet box "box 2 electric boogaloo" i

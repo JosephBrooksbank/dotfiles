@@ -11,9 +11,19 @@
 
 set $mod Mod4
 
+## Setting misc options 
+# Popups for fullscreen app will come through 
+popup_during_fullscreen smart
+# Pressing the command to go to current workspace will go back to previous
+workspace_auto_back_and_forth yes
+
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
+exec unclutter &
+# set up watcher for inkscape figures, see workflow for vim + latex + inkscape  
+exec inkscape-figures watch &
 exec wal -R &
 bindsym $mod+Print exec "wal -i $HOME/Pictures/Wallpapers;/home/jbrooksbank/bin/intellijPywal/intellijPywalGen.sh  /home/jbrooksbank/.CLion2019.1/config"
 
@@ -149,6 +159,14 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+
+### WORKSPACE SPECIFIC APPLICATIONS ###
+
+# Assign inkscape to workspace 9 and shift focus to it upon opening 
+# This is useful for vim+LaTeX+inkscape (see https://castel.dev/ )
+assign [class="Inkscape"] $ws9
+for_window [class="Inkscape"] focus
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

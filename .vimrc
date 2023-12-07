@@ -1,3 +1,4 @@
+let mapleader=" "
 set autoindent
 set expandtab
 set smarttab
@@ -5,6 +6,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set smartcase
+set termguicolors
 
 syntax enable
 set wrap
@@ -22,6 +24,6 @@ set backspace=indent,eol,start
 set confirm
 set history=1000
 
-imap jk <Esc>
-imap kj <Esc>
+nnoremap <Up> gk
+nnoremap <Down> gj
 

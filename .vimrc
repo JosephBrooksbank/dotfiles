@@ -27,3 +27,10 @@ set history=1000
 nnoremap <Up> gk
 nnoremap <Down> gj
 
+" Plugins
+call plug#begin()
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+call plug#end()
+
+" Colorscheme
+colorscheme catppuccin-mocha

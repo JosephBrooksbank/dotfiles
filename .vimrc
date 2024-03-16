@@ -27,10 +27,14 @@ set history=1000
 nnoremap <Up> gk
 nnoremap <Down> gj
 
-" Plugins
+" Vim only items (incompatible with neovim)
+if !has('nvim')
+" Plugins 
 call plug#begin()
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 " Colorscheme
 colorscheme catppuccin-mocha
+endif
+

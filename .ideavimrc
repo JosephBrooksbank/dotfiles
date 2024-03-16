@@ -22,6 +22,7 @@ set easymotion
 set textobj-entire
 set ReplaceWithRegister
 set exchange
+set quickscope
 " Trying the new syntax
 Plug 'machakann/vim-highlightedyank'
 
@@ -67,11 +68,12 @@ nmap g, <Action>(JumpToNextChange)
 map <S-Space> <Action>(GotoNextError)
 
 " Reformat the current line only
-map <leader>l V<Action>(ReformatCode)
+map <leader>l <Action>(ReformatCode)
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 map <leader>i <Action>(GotoImplementation)
+map <leader>u <Action>(GotoDeclaration)
 
 map <leader>J Ji <ESC>
 
@@ -81,7 +83,7 @@ map H h
 " Toggle case and start typing. E.g. `<leader>iget`: `property` -> `getProperty`
 " map <leader>i ~hi
 " Remove selection and toggle case. E.g. `v2l<leader>u`: `getProperty` -> `property`
-vmap <leader>u d~h
+" vmap <leader>u d~h
 
 " I think it's a better solution
 map U <C-R>

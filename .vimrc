@@ -27,6 +27,9 @@ set history=1000
 nnoremap <Up> gk
 nnoremap <Down> gj
 
+""" Mappings
+nnoremap <leader>v <c-v>
+nnoremap // :nohlsearch<CR>
 " Vim only items (incompatible with neovim)
 if !has('nvim')
         " Plugins 

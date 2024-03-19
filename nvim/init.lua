@@ -2,3 +2,5 @@
 require("config.lazy")
 
 vim.cmd("set shell=pwsh")
+
+vim.cmd("command Dotfiles :e C:/git/dotfiles")

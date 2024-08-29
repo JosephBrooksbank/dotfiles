@@ -4,6 +4,8 @@
 """ My stuff
 set clipboard^=unnamedplus,unnamed
 
+" I'm not a true VIM user, I prefer IDE undos.
+set oldundo 
 set hlsearch
 set ignorecase
 set smartcase

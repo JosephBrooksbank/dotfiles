@@ -8,7 +8,7 @@ return {
       },
       center = {
         {
-          action = Util.telescope("files"),
+          action = Util.pick("files"),
           desc = " Find file",
           icon = " ",
           key = "f",
@@ -32,7 +32,7 @@ return {
           key = "g",
         },
         {
-          action = [[lua require("lazyvim.util").telescope.config_files()()]],
+          action = [[lua require("lazyvim.util").pick.config_files()()]],
           desc = " Config",
           icon = " ",
           key = "c",

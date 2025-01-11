@@ -1,0 +1,1 @@
+/home/jbrooksbank/.config/lvim/config.lua

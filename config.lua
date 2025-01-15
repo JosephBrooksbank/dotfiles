@@ -13,6 +13,10 @@ lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 lvim.keys.normal_mode["f"] = ":HopPattern<CR>"
 lvim.keys.normal_mode["<leader><leader>t"] = ":HopChar1<CR>"
 
+vim.api.nvim_create_user_command("Flash", function()
+  vim.cmd("!make flash")
+end, {})
+
 
 -- CPP stuff (from example config)
 lvim.format_on_save = true
@@ -31,7 +35,9 @@ table.insert(lvim.plugins, {
     config = function()
       require 'hop'.setup {}
     end
-  }
+  },
+  "kana/vim-textobj-user",
+  "kana/vim-textobj-entire"
 })
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "clangd" })

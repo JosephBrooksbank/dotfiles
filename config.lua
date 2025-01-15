@@ -37,7 +37,10 @@ table.insert(lvim.plugins, {
     end
   },
   "kana/vim-textobj-user",
-  "kana/vim-textobj-entire"
+  {
+    "kana/vim-textobj-entire",
+    after = "kana/vim-textobj-user"
+  }
 })
 
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "clangd" })

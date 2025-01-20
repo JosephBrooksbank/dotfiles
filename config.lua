@@ -19,7 +19,7 @@ end, {})
 
 
 -- CPP stuff (from example config)
-lvim.format_on_save = true
+lvim.format_on_save = false
 vim.diagnostic.config({ virtual_text = true })
 
 lvim.builtin.treesitter.highlight.enable = true
@@ -39,7 +39,7 @@ table.insert(lvim.plugins, {
   "kana/vim-textobj-user",
   {
     "kana/vim-textobj-entire",
-    after = "kana/vim-textobj-user"
+    dependencies = "kana/vim-textobj-user"
   }
 })
 

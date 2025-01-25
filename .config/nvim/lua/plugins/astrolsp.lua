@@ -50,11 +50,7 @@ return {
         },
         cmd = {
           "clangd",
-          '--query-driver="/usr/bin/avr-gcc"',
-          '--compile-commands-dir',
-          '.',
-          '--compile_args_from=filesystem',
-          '--enable-config'
+          '--query-driver=**',
         },
       },
     },

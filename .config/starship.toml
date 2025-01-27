@@ -46,6 +46,9 @@ format = '[$env_value]($style)'
 default = ''
 style = 'cyan'
 
+[package]
+disabled = true
+
 [bun]
 format = "via [$symbol]($style)"
 

@@ -95,10 +95,22 @@ wezterm.on("format-tab-title", function(tab, _, _, _, hover)
 	}
 end)
 
+local act = wezterm.action
+
 -- Keybindings
 config.keys = {
 	-- Remap paste for clipboard history compatibility
-	{ key = "v", mods = "CTRL", action = wezterm.action({ PasteFrom = "Clipboard" }) },
+	{ 
+		key = "v",
+		mods = "CTRL",
+		action = wezterm.action({ PasteFrom = "Clipboard" })
+	},
+	{
+		key = 't',
+		mods = 'SHIFT|ALT',
+		action = act.SpawnTab 'CurrentPaneDomain',
+	},
+
 }
 
 -- linux overrides

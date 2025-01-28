@@ -10,6 +10,7 @@
 - [wezterm](https://wezfurlong.org/wezterm/index.html)
 - [altSnap](https://github.com/RamonUnch/AltSnap)
 - neovim
+- [zoxide](https://github.com/ajeetdsouza/zoxide) 
 
 
 ## (Linux) Requirements
@@ -18,6 +19,7 @@
   - ripgrep 
 - [starship](starship.rs)
 - [wezterm](https://wezfurlong.org/wezterm/index.html)
+- [zoxide](https://github.com/ajeetdsouza/zoxide) 
 
 
 

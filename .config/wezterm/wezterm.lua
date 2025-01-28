@@ -43,7 +43,7 @@ config.background = {
 		},
 			width = "100%",
 			height = "100%",
-			opacity = 0.5
+			opacity = 0.1
 	},
 }
 config.window_close_confirmation = "NeverPrompt"
@@ -116,10 +116,11 @@ config.keys = {
 -- linux overrides
 if host_os == "linux" then
 	emoji_font = "Noto Color Emoji"
-	-- config.default_prog = { "zsh" }
 	config.front_end = "WebGpu"
 	config.window_background_image = os.getenv("HOME") .. "/.config/wezterm/bg-blurred.png"
 	config.window_decorations = nil -- use system decorations
+	config.default_prog = { "bash" }
+	config.default_cwd = "~"
 end
 
 return config

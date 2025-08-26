@@ -13,3 +13,4 @@ git config --global alias.logline "log --graph --pretty=format:'%Cred%h%Creset -
 
 git config --global alias.logs "logline -5"
 
+git config --global alias.ci '!git-co-fzf.bat'

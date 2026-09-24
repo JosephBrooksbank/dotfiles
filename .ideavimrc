@@ -11,7 +11,7 @@ set ignorecase
 set smartcase
 set visualbell
 set showmode
-set number relativenumber
+set number 
 
 let mapleader=" "
 
@@ -49,8 +49,9 @@ set ideastatusicon=gray
 """ My Mappings -----------------------------
 map <leader>f <Plug>(easymotion-s)
 map <leader>e <Plug>(easymotion-f)
+nmap s <Plug>(easymotion-s)
 
-map <leader>d <Action>(Debug)
+"map <leader>d <Action>(Debug)
 map <leader>r <Action>(RenameElement)
 map <leader>c <Action>(Stop)
 map <leader>z <Action>(ToggleDistractionFreeMode)
@@ -76,9 +77,8 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 map <leader>i <Action>(GotoImplementation)
 map <leader>u <Action>(GotoDeclaration)
-
 map <leader>J Ji <ESC>
-
+map <leader>t <Action>(ActivateTerminalToolWindow)
 " Just makes me nervous
 map H h
 

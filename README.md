@@ -29,7 +29,6 @@ Hard Links in Windows can be written with
 `New-Item -Path C:\LinkDir -ItemType SymbolicLink -Value F:\RealDir`
 - `.vimrc` -> `$HOME/.vimrc`
 - `.ideavimrc` -> `$HOME/.ideavimrc`
-- `nvim` -> `$HOME/AppData/Local/nvim/`
 - `AltSnap.ini` -> `$HOME/AppData/Roaming/AltSnap`
 
 everything else in `.config` can be mirrored in `$HOME/.config`. 
